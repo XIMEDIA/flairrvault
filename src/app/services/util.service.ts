@@ -324,7 +324,7 @@ const util = {
   },
   nano: {
     mFlrToRaw: mFlrToRaw,
-    kFlrToRaw: kFLRToRaw,
+    kFlrToRaw: kFlrToRaw,
     flrToRaw: flrToRaw,
     rawToMflr: rawToMflr,
     rawToKflr: rawToKflr,
