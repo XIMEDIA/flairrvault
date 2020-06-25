@@ -67,8 +67,8 @@ export class AccountDetailsComponent implements OnInit, OnDestroy {
       }
     });
     this.priceSub = this.price.lastPrice$.subscribe(event => {
-      this.account.balanceFiat = this.util.flairr.rawToMflr(this.account.balance || 0).times(this.price.price.lastPrice).toNumber();
-      this.account.pendingFiat = this.util.flairr.rawToMflr(this.account.pending || 0).times(this.price.price.lastPrice).toNumber();
+      this.account.balanceFiat = this.util.flr.rawToMflr(this.account.balance || 0).times(this.price.price.lastPrice).toNumber();
+      this.account.pendingFiat = this.util.flr.rawToMflr(this.account.pending || 0).times(this.price.price.lastPrice).toNumber();
     });
 
     await this.loadAccountDetails();

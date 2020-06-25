@@ -40,7 +40,7 @@ export class UtilService {
   };
   flr = {
     mFlrToRaw: mFlrToRaw,
-    kFLRToRaw: kFlrToRaw,
+    kFlrToRaw: kFlrToRaw,
     flrToRaw: flrToRaw,
     rawToMflr: rawToMflr,
     rawToKflr: rawToKflr,

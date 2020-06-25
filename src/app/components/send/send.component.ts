@@ -253,7 +253,7 @@ export class SendComponent implements OnInit {
     this.amountRaw = walletAccount.balanceRaw;
 
     const flairrVal = this.util.flr.rawToFlr(walletAccount.balance).floor();
-    const maxAmount = this.getAmountValueFromBase(this.util.nano.flrToRaw(flairrVal));
+    const maxAmount = this.getAmountValueFromBase(this.util.flr.flrToRaw(flairrVal));
     this.amount = maxAmount.toNumber();
     this.syncFiatPrice();
   }
