@@ -171,7 +171,7 @@ function getApplicationMenu() {
 
   if (process.platform === 'darwin') {
     template.unshift({
-      label: 'FlairrVault',
+      label: 'NanoVault',
       submenu: [
         {role: 'about'},
         {type: 'separator'},

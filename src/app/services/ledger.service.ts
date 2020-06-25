@@ -261,7 +261,7 @@ export class LedgerService {
       // Load nano object
       if (!this.ledger.nano) {
         try {
-          this.ledger.flr = new Flairr(this.ledger.transport);
+          this.ledger.nano = new Flairr(this.ledger.transport);
         } catch (err) {
           console.log(`Flairrcoin error: `, err);
           if (err.statusText == 'UNKNOWN_ERROR') {
