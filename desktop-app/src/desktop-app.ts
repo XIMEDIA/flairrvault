@@ -129,20 +129,20 @@ function getApplicationMenu() {
       submenu: [
         {
           label: 'View GitHub',
-          click () { loadExternal('https://github.com/cronoh/nanovault') }
+          click () { loadExternal('https://github.com/XIMEDIA/flairrvault') }
         },
         {
           label: 'Submit Issue',
-          click () { loadExternal('https://github.com/cronoh/nanovault/issues/new') }
+          click () { loadExternal('https://github.com/XIMEDIA/flairrvault/issues/new') }
         },
         {type: 'separator'},
         {
           type: 'normal',
-          label: `NanoVault Version: ${autoUpdater.currentVersion}`,
+          label: `FlairrVault Version: ${autoUpdater.currentVersion}`,
         },
         {
           label: 'View Latest Updates',
-          click () { loadExternal('https://github.com/cronoh/nanovault/releases') }
+          click () { loadExternal('https://github.com/XIMEDIA/flairrvault/releases') }
         },
         {type: 'separator'},
         {
@@ -157,7 +157,7 @@ function getApplicationMenu() {
 
   if (process.platform === 'darwin') {
     template.unshift({
-      label: 'NanoVault',
+      label: 'FlairrVault',
       submenu: [
         {role: 'about'},
         {type: 'separator'},
