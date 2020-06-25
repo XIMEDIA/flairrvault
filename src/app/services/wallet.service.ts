@@ -149,7 +149,7 @@ export class WalletService {
       if (this.wallet.pending.lte(0)) {
         this.wallet.pending = this.wallet.pending.plus(txAmount);
         this.wallet.pendingRaw = this.wallet.pendingRaw.plus(txAmount.mod(this.flr));
-        this.wallet.pendingFiat += this.util.nano.rawToMflr(txAmount).times(this.price.price.lastPrice).toNumber();
+        this.wallet.pendingFiat += this.util.flr.rawToMflr(txAmount).times(this.price.price.lastPrice).toNumber();
         this.wallet.hasPending = true;
       }
 

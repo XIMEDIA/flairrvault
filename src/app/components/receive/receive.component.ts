@@ -41,7 +41,7 @@ export class ReceiveComponent implements OnInit {
 
     let pending;
     if (this.settings.settings.minimumReceive) {
-      const minAmount = this.util.flairr.mFlrToRaw(this.settings.settings.minimumReceive);
+      const minAmount = this.util.flr.mFlrToRaw(this.settings.settings.minimumReceive);
       pending = await this.api.accountsPendingLimit(this.accounts.map(a => a.id), minAmount.toString(10));
     } else {
       pending = await this.api.accountsPending(this.accounts.map(a => a.id));
@@ -82,7 +82,7 @@ export class ReceiveComponent implements OnInit {
 
     let pending;
     if (this.settings.settings.minimumReceive) {
-      const minAmount = this.util.flairr.mFlrToRaw(this.settings.settings.minimumReceive);
+      const minAmount = this.util.flr.mFlrToRaw(this.settings.settings.minimumReceive);
       pending = await this.api.pendingLimit(account, 50, minAmount.toString(10));
     } else {
       pending = await this.api.pending(account, 50);
@@ -120,7 +120,7 @@ export class ReceiveComponent implements OnInit {
     const newBlock = await this.flairrBlock.generateReceive(walletAccount, sourceBlock, this.walletService.isLedgerWallet());
 
     if (newBlock) {
-      this.notificationService.sendSuccess(`Successfully received Flairr!`);
+      this.notificationService.sendSuccess(`Successfully received Flairrcoin!`);
     } else {
       if (!this.walletService.isLedgerWallet()) {
         this.notificationService.sendError(`There was an error receiving the transaction`)
