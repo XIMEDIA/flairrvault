@@ -1,11 +1,11 @@
 import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'app-nano-account-id',
-  templateUrl: './nano-account-id.component.html',
-  styleUrls: ['./nano-account-id.component.css']
+  selector: 'app-flairr-account-id',
+  templateUrl: './flairr-account-id.component.html',
+  styleUrls: ['./flairr-account-id.component.css']
 })
-export class NanoAccountIdComponent implements OnInit {
+export class FlairrAccountIdComponent implements OnInit {
 
   @Input('accountID') accountID: string;
 

@@ -5,7 +5,7 @@ const path = require('path');
 
 // const TransportNodeHid = require('@ledgerhq/hw-transport-node-hid');
 
-app.setAsDefaultProtocolClient('xrb'); // Register handler for xrb: links
+app.setAsDefaultProtocolClient('flr'); // Register handler for flr: links
 
 console.log(`Starting ledger@!`);
 
@@ -143,11 +143,11 @@ function getApplicationMenu() {
       submenu: [
         {
           label: 'View GitHub',
-          click () { loadExternal('https://github.com/cronoh/nanovault') }
+          click () { loadExternal('https://github.com/XIMEDIA/flairrvault') }
         },
         {
           label: 'Submit Issue',
-          click () { loadExternal('https://github.com/cronoh/nanovault/issues/new') }
+          click () { loadExternal('https://github.com/XIMEDIA/flairrvault/issues/new') }
         },
         {type: 'separator'},
         {
@@ -156,7 +156,7 @@ function getApplicationMenu() {
         },
         {
           label: 'View Latest Updates',
-          click () { loadExternal('https://github.com/cronoh/nanovault/releases') }
+          click () { loadExternal('https://github.com/XIMEDIA/flairrvault/releases') }
         },
         {type: 'separator'},
         {

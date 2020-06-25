@@ -23,10 +23,10 @@ interface AppSettings {
 
 @Injectable()
 export class AppSettingsService {
-  storeKey = `nanovault-appsettings`;
+  storeKey = `flairrvault-appsettings`;
 
   settings: AppSettings = {
-    displayDenomination: 'mnano',
+    displayDenomination: 'mFlr',
     // displayPrefix: 'xrb',
     walletStore: 'localStorage',
     displayCurrency: 'USD',
@@ -34,7 +34,7 @@ export class AppSettingsService {
     lockOnClose: 1,
     lockInactivityMinutes: 30,
     powSource: 'best',
-    serverName: 'nanovault',
+    serverName: 'flairrvault',
     serverAPI: null,
     serverNode: null,
     serverWS: null,
@@ -80,7 +80,7 @@ export class AppSettingsService {
   clearAppSettings() {
     localStorage.removeItem(this.storeKey);
     this.settings = {
-      displayDenomination: 'mnano',
+      displayDenomination: 'mFlr',
       // displayPrefix: 'xrb',
       walletStore: 'localStorage',
       displayCurrency: 'USD',
@@ -88,7 +88,7 @@ export class AppSettingsService {
       lockOnClose: 1,
       lockInactivityMinutes: 30,
       powSource: 'best',
-      serverName: 'nanovault',
+      serverName: 'flairrvault',
       serverNode: null,
       serverAPI: null,
       serverWS: null,

@@ -38,13 +38,13 @@ export class UtilService {
     getAccountPublicKey: getAccountPublicKey,
     setPrefix: setPrefix,
   };
-  nano = {
-    mnanoToRaw: mnanoToRaw,
-    knanoToRaw: knanoToRaw,
-    nanoToRaw: nanoToRaw,
-    rawToMnano: rawToMnano,
-    rawToKnano: rawToKnano,
-    rawToNano: rawToNano,
+  flr = {
+    mFlrToRaw: mFlrToRaw,
+    kFlrToRaw: kFlrToRaw,
+    flrToRaw: flrToRaw,
+    rawToMflr: rawToMflr,
+    rawToKflr: rawToKflr,
+    rawToFlr: rawToFlr,
   };
 
 }
@@ -206,7 +206,7 @@ function generateAccountKeyPair(accountSecretKeyBytes) {
   return nacl.sign.keyPair.fromSecretKey(accountSecretKeyBytes);
 }
 
-function getPublicAccountID(accountPublicKeyBytes, prefix = 'nano') {
+function getPublicAccountID(accountPublicKeyBytes, prefix = 'flr') {
   const accountHex = util.uint8.toHex(accountPublicKeyBytes);
   const keyBytes = util.uint4.toUint8(util.hex.toUint4(accountHex)); // For some reason here we go from u, to hex, to 4, to 8??
   const checksum = util.uint5.toString(util.uint4.toUint5(util.uint8.toUint4(blake.blake2b(keyBytes, null, 5).reverse())));
@@ -217,19 +217,15 @@ function getPublicAccountID(accountPublicKeyBytes, prefix = 'nano') {
 
 function getAccountPublicKey(account) {
   if (account.length == 64) {
-    if(!account.startsWith('xrb_1') && !account.startsWith('xrb_3')) {
-      throw new Error(`Invalid NANO Account`);
-    }
-  } else if (account.length == 65) {
-    if(!account.startsWith('nano_1') && !account.startsWith('nano_3')) {
-      throw new Error(`Invalid NANO Account`);
+    if(!account.startsWith('flr_1') && !account.startsWith('flr_3')) {
+      throw new Error(`Invalid FLAIRRCOIN Account`);
     }
   } else {
-    throw new Error(`Invalid NANO Account`);
+    throw new Error(`Invalid FLAIRRCOIN Account`);
   }
-  const account_crop = account.length == 64 ? account.substring(4,64) : account.substring(5,65);
+  const account_crop = account.substring(4,64);
   const isValid = /^[13456789abcdefghijkmnopqrstuwxyz]+$/.test(account_crop);
-  if (!isValid) throw new Error(`Invalid NANO account`);
+  if (!isValid) throw new Error(`Invalid FLAIRRCOIN account`);
 
   const key_uint4 = array_crop(uint5ToUint4(stringToUint5(account_crop.substring(0, 52))));
   const hash_uint4 = uint5ToUint4(stringToUint5(account_crop.substring(52, 60)));
@@ -252,26 +248,26 @@ function setPrefix(account, prefix = 'xrb') {
 /**
  * Conversion functions
  */
-const mnano = 1000000000000000000000000000000;
-const knano = 1000000000000000000000000000;
-const nano  = 1000000000000000000000000;
-function mnanoToRaw(value) {
-  return new BigNumber(value).times(mnano);
+const mFlr = 1000000000000000000000000000000;
+const kFlr = 1000000000000000000000000000;
+const flr  = 1000000000000000000000000;
+function mFlrToRaw(value) {
+  return new BigNumber(value).times(mFlr);
 }
-function knanoToRaw(value) {
-  return new BigNumber(value).times(knano);
+function kFlrToRaw(value) {
+  return new BigNumber(value).times(kFlr);
 }
-function nanoToRaw(value) {
-  return new BigNumber(value).times(nano);
+function flrToRaw(value) {
+  return new BigNumber(value).times(flr);
 }
-function rawToMnano(value) {
-  return new BigNumber(value).div(mnano);
+function rawToMflr(value) {
+  return new BigNumber(value).div(mFlr);
 }
-function rawToKnano(value) {
-  return new BigNumber(value).div(knano);
+function rawToKflr(value) {
+  return new BigNumber(value).div(kFlr);
 }
-function rawToNano(value) {
-  return new BigNumber(value).div(nano);
+function rawToFlr(value) {
+  return new BigNumber(value).div(flr);
 }
 
 
@@ -327,11 +323,11 @@ const util = {
     setPrefix: setPrefix,
   },
   nano: {
-    mnanoToRaw: mnanoToRaw,
-    knanoToRaw: knanoToRaw,
-    nanoToRaw: nanoToRaw,
-    rawToMnano: rawToMnano,
-    rawToKnano: rawToKnano,
-    rawToNano: rawToNano,
-  }
+    mFlrToRaw: mFlrToRaw,
+    kFlrToRaw: kFlrToRaw,
+    flrToRaw: flrToRaw,
+    rawToMflr: rawToMflr,
+    rawToKflr: rawToKflr,
+    rawToFlr: rawToFlr,
+}
 };
