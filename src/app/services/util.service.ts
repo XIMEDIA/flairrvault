@@ -38,7 +38,7 @@ export class UtilService {
     getAccountPublicKey: getAccountPublicKey,
     setPrefix: setPrefix,
   };
-  nano = {
+  flr = {
     mFlrToRaw: mFlrToRaw,
     kFLRToRaw: kFlrToRaw,
     flrToRaw: flrToRaw,
