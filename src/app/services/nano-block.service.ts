@@ -14,7 +14,7 @@ const nacl = window['nacl'];
 const STATE_BLOCK_PREAMBLE = '0000000000000000000000000000000000000000000000000000000000000006';
 
 @Injectable()
-export class NanoBlockService {
+export class FlairrBlockService {
   representativeAccount = 'flr_3zeuug3f36638druad775jufxk9jjkmzs153mebd7dh4n9ypej5ibfmht9ut'; // NanoVault Representative
 
   constructor(
