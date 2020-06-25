@@ -252,7 +252,7 @@ const mFlr = 1000000000000000000000000000000;
 const kFlr = 1000000000000000000000000000;
 const flr  = 1000000000000000000000000;
 function mFlrToRaw(value) {
-  return new BigNumber(value).times(mFLR);
+  return new BigNumber(value).times(mFlr);
 }
 function kFlrToRaw(value) {
   return new BigNumber(value).times(kFlr);
