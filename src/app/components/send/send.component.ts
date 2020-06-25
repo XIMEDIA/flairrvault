@@ -118,8 +118,8 @@ export class SendComponent implements OnInit {
   syncFlairrPrice() {
     const fiatAmount = this.amountFiat || 0;
     const rawAmount = this.util.flr.mFlrToRaw(new BigNumber(fiatAmount).div(this.price.price.lastPrice));
-    const nanoVal = this.util.flr.rawToFlr(rawAmount).floor();
-    const flairrAmount = this.getAmountValueFromBase(this.util.flr.flrToRaw(nanoVal));
+    const flairrVal = this.util.flr.rawToFlr(rawAmount).floor();
+    const flairrAmount = this.getAmountValueFromBase(this.util.flr.flrToRaw(flairrVal));
 
     this.amount = flairrAmount.toNumber();
   }
@@ -252,8 +252,8 @@ export class SendComponent implements OnInit {
 
     this.amountRaw = walletAccount.balanceRaw;
 
-    const nanoVal = this.util.flr.rawToFlr(walletAccount.balance).floor();
-    const maxAmount = this.getAmountValueFromBase(this.util.nano.flrToRaw(nanoVal));
+    const flairrVal = this.util.flr.rawToFlr(walletAccount.balance).floor();
+    const maxAmount = this.getAmountValueFromBase(this.util.nano.flrToRaw(flairrVal));
     this.amount = maxAmount.toNumber();
     this.syncFiatPrice();
   }
