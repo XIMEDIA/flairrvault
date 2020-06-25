@@ -329,4 +329,5 @@ const util = {
     rawToMflr: rawToMflr,
     rawToKflr: rawToKflr,
     rawToFlr: rawToFlr,
+}
 };
