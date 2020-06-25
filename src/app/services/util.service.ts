@@ -39,12 +39,12 @@ export class UtilService {
     setPrefix: setPrefix,
   };
   nano = {
-    mFlrToRaw: mnanoToRaw,
-    kFLRToRaw: knanoToRaw,
-    flrToRaw: nanoToRaw,
-    rawToMflr: rawToMnano,
-    rawToKflr: rawToKnano,
-    rawToFlr: rawToNano,
+    mFlrToRaw: mFlrToRaw,
+    kFLRToRaw: kFlrToRaw,
+    flrToRaw: flrToRaw,
+    rawToMflr: rawToMflr,
+    rawToKflr: rawToKflr,
+    rawToFlr: rawToFlr,
   };
 
 }
