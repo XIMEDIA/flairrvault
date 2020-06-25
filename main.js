@@ -5,7 +5,7 @@ const path = require('path');
 
 // const TransportNodeHid = require('@ledgerhq/hw-transport-node-hid');
 
-app.setAsDefaultProtocolClient('xrb'); // Register handler for xrb: links
+app.setAsDefaultProtocolClient('flr'); // Register handler for flr: links
 
 console.log(`Starting ledger@!`);
 
