@@ -24,9 +24,9 @@ export class ConfigureAppComponent implements OnInit {
   wallet = this.walletService.wallet;
 
   denominations = [
-    { name: 'FLAIRR (1 Mflr)', value: 'mFlr' },
-    { name: 'kFlairr (0.001 Mflr)', value: 'kFlairr' },
-    { name: 'flairr (0.000001 Mflr)', value: 'flairr' },
+    { name: 'FLR (1 Mflr)', value: 'mFlr' },
+    { name: 'kFLR (0.001 Mflr)', value: 'kFlairr' },
+    { name: 'flr (0.000001 Mflr)', value: 'flairr' },
   ];
   selectedDenomination = this.denominations[0].value;
 

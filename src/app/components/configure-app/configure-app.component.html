@@ -28,7 +28,7 @@
             <div class="uk-form-horizontal">
 
               <div class="uk-margin">
-                <label class="uk-form-label">Display Denomination <span uk-icon="icon: info;" uk-tooltip title="Change the default denomination used throughout the application when displaying Flairr balances"></span></label>
+                <label class="uk-form-label">Display Denomination <span uk-icon="icon: info;" uk-tooltip title="Change the default denomination used throughout the application when displaying Flairrcoin balances"></span></label>
                 <div class="uk-form-controls">
 
                   <div class="uk-inline uk-width-1-1">
@@ -45,7 +45,7 @@
             <!--<div class="uk-form-horizontal">-->
 
               <!--<div class="uk-margin">-->
-                <!--<label class="uk-form-label">Account Prefix <span uk-icon="icon: info;" uk-tooltip title="Change the Flairr account prefix used throughout the application.  Both are valid when sending"></span></label>-->
+                <!--<label class="uk-form-label">Account Prefix <span uk-icon="icon: info;" uk-tooltip title="Change the Flairrcoin account prefix used throughout the application.  Both are valid when sending"></span></label>-->
                 <!--<div class="uk-form-controls">-->
 
                   <!--<div class="uk-inline uk-width-1-1">-->
@@ -140,7 +140,7 @@
 
                     <div class="uk-width-2-5">
                       <div class="uk-inline uk-width-1-1">
-                        <button class="uk-button uk-button-primary uk-width-1-1" type="button" style="text-transform: none;">FLAIRR</button>
+                        <button class="uk-button uk-button-primary uk-width-1-1" type="button" style="text-transform: none;">FLR</button>
                       </div>
                     </div>
                   </div>
@@ -205,7 +205,7 @@
             <div class="uk-form-horizontal">
 
               <div class="uk-margin">
-                <label class="uk-form-label" for="form-horizontal-select">Server Configuration <span uk-icon="icon: info;" uk-tooltip title="Change which server is used to communicate with the Flairr network"></span></label>
+                <label class="uk-form-label" for="form-horizontal-select">Server Configuration <span uk-icon="icon: info;" uk-tooltip title="Change which server is used to communicate with the Flairrcoin network"></span></label>
                 <div class="uk-form-controls">
                   <select class="uk-select" [(ngModel)]="selectedServer" (change)="serverConfigChange(selectedServer)" id="form-horizontal-select">
                     <option *ngFor="let server of serverOptions" [value]="server.value">{{ server.name }}</option>
@@ -240,7 +240,7 @@
           <div class="uk-width-1-1">
             <div class="uk-form-horizontal">
               <div class="">
-                <label class="uk-form-label uk-text-right">Override Flairr Node <span uk-icon="icon: info;" uk-tooltip title="Override which node is used by the API Server to communicate with the Flairr network"></span></label>
+                <label class="uk-form-label uk-text-right">Override Flairr Node <span uk-icon="icon: info;" uk-tooltip title="Override which node is used by the API Server to communicate with the Flairrcoin network"></span></label>
                 <div class="uk-form-controls">
 
                   <div class="uk-inline uk-width-1-1">
@@ -251,7 +251,7 @@
                     <div class="uk-inline uk-width-1-1" *ngIf="showServerConfigs()">
                       <input [(ngModel)]="serverNode" class="uk-input uk-margin-small-bottom" type="text" placeholder="http://125.32.211.54:7076">
                       <span class="uk-text-meta">
-                        This server must be exposing the <a href="https://developers.nano.org/docs/rpc/" target="_blank">Flairr RPC</a> to the API server used above.<br>
+                        This server must be exposing the <a href="https://developers.nano.org/docs/rpc/" target="_blank">Flairrcoin RPC</a> to the API server used above.<br>
                         Requests will still be sent to the API server, but this node will be used to communicate with the network.
                       </span>
                     </div>

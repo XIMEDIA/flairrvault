@@ -324,7 +324,7 @@ export class RepresentativeService {
   defaultRepresentatives = [
     {
       id: 'flr_3zeuug3f36638druad775jufxk9jjkmzs153mebd7dh4n9ypej5ibfmht9ut',
-      name: 'NanoVault Rep',
+      name: 'FlairrVault Rep',
       trusted: true,
     },
     {

@@ -16,7 +16,7 @@
 
           <div style="display: inline-block; text-align: right;" class="uk-text-truncate" *ngIf="node.status || !isConfigured()">
             <span class="balance-text" style="display: inline-block; text-align: left; float: left; margin-top: 5px;">Balance </span>
-            <span class="" style="margin-left: 11px; color: #62a25b; display: inline-block; font-size: 12px;" uk-tooltip title="Last Price: {{ price.price.lastPrice | fiat: settings.settings.displayCurrency }} / FLAIRR">{{ wallet.balanceFiat | fiat: settings.settings.displayCurrency }}</span>
+            <span class="" style="margin-left: 11px; color: #62a25b; display: inline-block; font-size: 12px;" uk-tooltip title="Last Price: {{ price.price.lastPrice | fiat: settings.settings.displayCurrency }} / FLR">{{ wallet.balanceFiat | fiat: settings.settings.displayCurrency }}</span>
             <span class="balance" style="clear: left; text-align: left;" [ngClass]="{ 'uk-text-danger': node.status === false, 'uk-text-muted': node.status === null && isConfigured() }">{{ wallet.balance | rai: settings.settings.displayDenomination }}</span>
           </div>
 
@@ -74,7 +74,7 @@
         <div class="uk-width-1-1 uk-text-center" style="padding-top: 15px;">
           <a href="http://github.com/XIMEDIA/flairrvault" uk-icon="icon: wordpress" uk-tooltip title="View our Blog and Guides" class="footer-link" target="_blank"></a>
           <a href="https://github.com/XIMEDIA/flairrvault" uk-icon="icon: github-alt" uk-tooltip title="View our GitHub" class="footer-link" target="_blank"></a>
-          <a href="https://twitter.com/NanoVault" uk-icon="icon: twitter" uk-tooltip title="Chat with us on Twitter" class="footer-link" target="_blank"></a>
+          <a href="https://twitter.com/FlairrVault" uk-icon="icon: twitter" uk-tooltip title="Chat with us on Twitter" class="footer-link" target="_blank"></a>
           <a href="https://discord.gg/kCeAuJM" uk-icon="icon: users" uk-tooltip title="Join our community on Discord" class="footer-link" target="_blank"></a>
           <a href="javascript:void(0)" uk-icon="icon: search" uk-tooltip title="View an account or transaction" class="footer-link" (click)="toggleSearch(true)"></a>
         </div>
@@ -84,7 +84,7 @@
         <div class="uk-width-1-1" style="padding-left: 60px; padding-right: 20px;">
           <form class="uk-search uk-search-default uk-width-1-1">
             <a href="javascript:void(0)" (click)="performSearch()" class="uk-search-icon-flip" uk-search-icon></a>
-            <input class="uk-search-input uk-width-1-1" id="search-input-mobile" type="search" placeholder="Flairr account or transaction hash" [(ngModel)]="searchData" style="border: 0;" name="searchData" (keyup.enter)="performSearch()">
+            <input class="uk-search-input uk-width-1-1" id="search-input-mobile" type="search" placeholder="Flairrcoin account or transaction hash" [(ngModel)]="searchData" style="border: 0;" name="searchData" (keyup.enter)="performSearch()">
           </form>
         </div>
       </div>
@@ -123,7 +123,7 @@
 
             <div style="display: inline-block; text-align: right;" class="uk-text-truncate" *ngIf="node.status || !isConfigured()">
               <span class="balance-text" style="display: inline-block; text-align: left; float: left; margin-top: 5px;">Balance </span>
-              <span class="" style="margin-left: 11px; color: #62a25b; display: inline-block; font-size: 12px;" uk-tooltip title="Last Price: {{ price.price.lastPrice | fiat: settings.settings.displayCurrency }} / FLAIRR">{{ wallet.balanceFiat | fiat: settings.settings.displayCurrency }}</span>
+              <span class="" style="margin-left: 11px; color: #62a25b; display: inline-block; font-size: 12px;" uk-tooltip title="Last Price: {{ price.price.lastPrice | fiat: settings.settings.displayCurrency }} / FLR">{{ wallet.balanceFiat | fiat: settings.settings.displayCurrency }}</span>
               <span class="balance" style="clear: left; text-align: left;">
                 {{ wallet.balance | rai: settings.settings.displayDenomination }}
               </span>
@@ -189,7 +189,7 @@
           <div class="uk-width-1-1 uk-text-center" style="padding-top: 15px;">
             <a href="http://github.com/XIMEDIA/flairrvault" uk-icon="icon: wordpress" uk-tooltip title="View our Blog and Guides" class="footer-link" target="_blank"></a>
             <a href="https://github.com/XIMEDIA/flairrvault" uk-icon="icon: github-alt" uk-tooltip title="View our GitHub" class="footer-link" target="_blank"></a>
-            <a href="https://twitter.com/NanoVault" uk-icon="icon: twitter" uk-tooltip title="Chat with us on Twitter" class="footer-link" target="_blank"></a>
+            <a href="https://twitter.com/FlairrVault" uk-icon="icon: twitter" uk-tooltip title="Chat with us on Twitter" class="footer-link" target="_blank"></a>
             <a href="https://discord.gg/kCeAuJM" uk-icon="icon: users" uk-tooltip title="Join our community on Discord" class="footer-link" target="_blank"></a>
             <a href="javascript:void(0)" uk-icon="icon: search" uk-tooltip title="View an account or transaction" class="footer-link" (click)="toggleSearch()"></a>
           </div>
@@ -199,7 +199,7 @@
           <div class="uk-width-1-1" style="padding-left: 60px; padding-right: 20px;">
             <form class="uk-search uk-search-default uk-width-1-1">
               <a href="javascript:void(0)" (click)="performSearch()" class="uk-search-icon-flip" uk-search-icon></a>
-              <input class="uk-search-input uk-width-1-1" id="search-input" type="search" placeholder="Flairr account or transaction hash" [(ngModel)]="searchData" style="border: 0;" name="searchData" (keyup.enter)="performSearch()">
+              <input class="uk-search-input uk-width-1-1" id="search-input" type="search" placeholder="Flairrcoin account or transaction hash" [(ngModel)]="searchData" style="border: 0;" name="searchData" (keyup.enter)="performSearch()">
             </form>
           </div>
         </div>

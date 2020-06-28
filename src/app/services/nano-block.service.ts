@@ -15,7 +15,7 @@ const STATE_BLOCK_PREAMBLE = '00000000000000000000000000000000000000000000000000
 
 @Injectable()
 export class FlairrBlockService {
-  representativeAccount = 'flr_3zeuug3f36638druad775jufxk9jjkmzs153mebd7dh4n9ypej5ibfmht9ut'; // NanoVault Representative
+  representativeAccount = 'flr_3zeuug3f36638druad775jufxk9jjkmzs153mebd7dh4n9ypej5ibfmht9ut'; // FlairrVault Representative
 
   constructor(
     private api: ApiService,

@@ -97,7 +97,7 @@ export class ConfigureWalletComponent implements OnInit {
     }
 
     if (this.ledger.status === LedgerStatus.LOCKED) {
-      return this.notifications.sendWarning(`Unlock your ledger device and open the Flairr app to continue`);
+      return this.notifications.sendWarning(`Unlock your ledger device and open the FlairrVault app to continue`);
     }
 
     if (refreshOnly) {
@@ -129,10 +129,10 @@ export class ConfigureWalletComponent implements OnInit {
 
     const UIkit = window['UIkit'];
     try {
-      await UIkit.modal.confirm('<p style="text-align: center;"><span style="font-size: 18px;">You are about to create a new wallet<br>which will <b>overwrite your existing wallet</b></span><br><br><b style="font-size: 18px;">Be sure you have saved your current Flairr seed before continuing</b><br><br>Without it - <b>ALL FUNDS WILL BE UNRECOVERABLE</b></p>');
+      await UIkit.modal.confirm('<p style="text-align: center;"><span style="font-size: 18px;">You are about to create a new wallet<br>which will <b>overwrite your existing wallet</b></span><br><br><b style="font-size: 18px;">Be sure you have saved your current Flairrcoin seed before continuing</b><br><br>Without it - <b>ALL FUNDS WILL BE UNRECOVERABLE</b></p>');
       return true;
     } catch (err) {
-      this.notifications.sendInfo(`Use the 'Manage Wallet' page to back up your Flairr seed before continuing!`);
+      this.notifications.sendInfo(`Use the 'Manage Wallet' page to back up your Flairrcoin seed before continuing!`);
       return false;
     }
   }

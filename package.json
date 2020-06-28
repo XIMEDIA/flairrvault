@@ -1,5 +1,5 @@
 {
-  "name": "NanoVault",
+  "name": "FlairrVault",
   "version": "1.2.1",
   "license": "MIT",
   "description": "Wallet for interacting with Nano",
@@ -89,9 +89,9 @@
     "uikit": "^3.0.0-beta.40"
   },
   "build": {
-    "appId": "com.electron.nanovault",
+    "appId": "com.electron.flairrvault",
     "buildVersion": "1.2.1",
-    "productName": "NanoVault",
+    "productName": "FlairrVault",
     "copyright": "Copyright © 2019 Andrew Steele",
     "directories": {
       "output": "desktop-app/build",
