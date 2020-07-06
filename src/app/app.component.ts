@@ -104,12 +104,11 @@ export class AppComponent implements OnInit {
       }
     }, 1000);
 
-    try {
-      await this.updateFiatPrices();
-    } catch (err) {
-      this.notifications.sendWarning(`There was an issue retrieving latest Flairrcoin price.  Ensure your AdBlocker is disabled on this page then reload to see accurate FIAT values.`, { length: 0, identifier: `price-adblock` });
-    }
-
+    // try {
+    //   await this.updateFiatPrices();
+    // } catch (err) {
+    //   this.notifications.sendWarning(`There was an issue retrieving latest Flairrcoin price.  Ensure your AdBlocker is disabled on this page then reload to see accurate FIAT values.`, { length: 0, identifier: `price-adblock` });
+    // }
   }
 
   /*

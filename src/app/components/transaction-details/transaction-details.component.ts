@@ -4,6 +4,7 @@ import {ApiService} from "../../services/api.service";
 import {AppSettingsService} from "../../services/app-settings.service";
 import BigNumber from "bignumber.js";
 import {AddressBookService} from "../../services/address-book.service";
+import { time } from 'console';
 
 @Component({
   selector: 'app-transaction-details',
@@ -131,6 +132,10 @@ export class TransactionDetailsComponent implements OnInit {
     this.fromAddressBook = this.addressBook.getAccountName(fromAccount);
     this.toAddressBook = this.addressBook.getAccountName(toAccount);
 
+  }
+
+  getDateFromTimestamp(ts){
+    return new Date(ts * 1000);
   }
 
   getBalanceFromHex(balance) {

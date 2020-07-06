@@ -70,8 +70,7 @@
         <div class="uk-margin">
           <label class="uk-form-label">Date:</label>
           <div class="uk-form-controls uk-text-truncate">
-            <span *ngIf="transaction.timestamp">{{ transaction?.timestamp | date: 'short' }}</span>
-            <span *ngIf="!transaction.timestamp" class="uk-text-muted">N/A</span>
+            <span class="uk-text-small">{{ getDateFromTimestamp(transaction?.local_timestamp) }}</span>
           </div>
         </div>
         <div class="uk-margin" *ngIf="transaction?.contents?.balance">

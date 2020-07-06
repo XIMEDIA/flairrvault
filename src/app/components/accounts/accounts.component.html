@@ -29,7 +29,6 @@
             Account
           </th>
           <th class="uk-width-1-5@m uk-width-1-4 uk-text-right">Balance</th>
-          <th class="uk-width-1-5@m uk-width-1-4 uk-text-right"></th>
         </tr>
         </thead>
         <tbody>
@@ -64,16 +63,6 @@
             <div *ngIf="account.pendingRaw.gt(0)" style="font-size: 10px;" class="uk-text-muted">
               +{{ account.pendingRaw.toString(10) | squeeze:'5,5' }} raw
             </div>
-          </td>
-          <td class=" uk-text-left">
-            {{ account.balanceFiat | fiat: settings.settings.displayCurrency }}
-            <div *ngIf="account.pending.gt(0)" class="uk-text-muted uk-text-small">
-              {{ account.pendingFiat | fiat: settings.settings.displayCurrency }}
-            </div>
-            <div class="uk-float-right uk-hidden-hover">
-              <a (click)="deleteAccount(account)" class="uk-text-danger" title="Hide Account" uk-tooltip><span uk-icon="icon: close;"></span></a>
-            </div>
-
           </td>
         </tr>
         <tr *ngIf="!(accounts).length">
