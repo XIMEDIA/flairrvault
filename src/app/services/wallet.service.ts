@@ -300,7 +300,7 @@ export class WalletService {
     const exportData = this.generateExportData();
     const base64Data = btoa(JSON.stringify(exportData));
 
-    return `https://vault.flairrcoin.com/import-wallet#${base64Data}`;
+    return `https://flairrcoin.com/vault/import-wallet#${base64Data}`;
   }
 
   lockWallet() {

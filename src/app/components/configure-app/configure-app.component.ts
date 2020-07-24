@@ -263,7 +263,7 @@ export class ConfigureAppComponent implements OnInit {
       if (this.serverAPI.startsWith('https://') || this.serverAPI.startsWith('http://')) {
         newSettings.serverAPI = this.serverAPI;
       } else {
-        return this.notifications.sendWarning(`Custom API Server has an invalid address.  Make sure to use the full address ie: https://vault.flairrcoin.com/api/node-api`);
+        return this.notifications.sendWarning(`Custom API Server has an invalid address.  Make sure to use the full address ie: https://flairrcoin.com/server/api/node-api`);
       }
     }
 
@@ -279,7 +279,7 @@ export class ConfigureAppComponent implements OnInit {
       if (this.serverWS.startsWith('wss://') || this.serverWS.startsWith('ws://')) {
         newSettings.serverWS = this.serverWS;
       } else {
-        return this.notifications.sendWarning(`Custom Update Server has an invalid address.  Make sure to use the full address ie: wss://ws.vault.flairrcoin.com/`);
+        return this.notifications.sendWarning(`Custom Update Server has an invalid address.  Make sure to use the full address ie: wss://ws.flairrcoin.com/`);
       }
     }
 

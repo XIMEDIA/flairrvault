@@ -223,10 +223,10 @@
                 <div class="uk-form-controls">
 
                   <div class="uk-inline uk-width-1-1" *ngIf="!showServerConfigs()">
-                    <strong>{{ serverAPI || 'https://vault.flairrcoin.com/api/node-api' }}</strong>
+                    <strong>{{ 'https://flairrcoin.com/server/api/node-api' || serverAPI}}</strong>
                   </div>
                   <div class="uk-inline uk-width-1-1" *ngIf="showServerConfigs()">
-                    <input [(ngModel)]="serverAPI" class="uk-input uk-margin-small-bottom" type="text" placeholder="https://vault.flairrcoin.com/api/node-api">
+                    <input [(ngModel)]="serverAPI" class="uk-input uk-margin-small-bottom" type="text" placeholder="https://flairrcoin.com/server/api/node-api">
                     <span class="uk-text-meta">
                       This server must be running the <a href="https://github.com/XIMEDIA/flairrvault-server" target="_blank">FlairrVault Server</a> application, or an API compliant with it.<br>
                       Timestamps in the application are dependant on this server's access to them.
