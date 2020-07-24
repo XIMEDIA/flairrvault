@@ -15,7 +15,7 @@ export interface NinjaVerifiedRep {
 @Injectable()
 export class ApiService {
   // apiUrl = `http://localhost:9900/api`;
-  apiUrl = `http://localhost:9900/api`;
+  apiUrl = `https://flairrcoin.com/server/api`;
   rpcUrl = `${this.apiUrl}/node-api`;
 
   constructor(private http: HttpClient, private node: NodeService, private appSettings: AppSettingsService) { }
