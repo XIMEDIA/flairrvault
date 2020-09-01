@@ -91,7 +91,7 @@ export class AppSettingsService {
       serverName: 'flairrvault',
       serverNode: null,
       serverAPI: null,
-      serverWS: null,
+      serverWS: 'wss://flairrcoin.com/socket',
       minimumReceive: null,
       walletVersion: 1,
     };
