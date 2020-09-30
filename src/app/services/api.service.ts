@@ -32,9 +32,16 @@ export class ApiService {
     return await this.http.post(apiUrl, data).toPromise()
       .then(res => {
         this.node.setOnline();
+        console.log(res);
+        console.log(apiUrl);
+        console.log(data);
+        
+        
         return res;
       })
       .catch(err => {
+        console.log('err: ', err);
+        
         if (err.status === 500 || err.status === 0) {
           this.node.setOffline(); // Hard error, node is offline
         }
