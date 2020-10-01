@@ -87,7 +87,7 @@ export class ApiService {
     return await this.request('validate_account_number', { account });
   }
   async pending(account, count): Promise<any> {
-    return await this.request('pending', { account, count, source: true });
+    return await this.request('pending', { account, count, source: true, include_active: true });
   }
   async pendingLimit(account, count, threshold): Promise<any> {
     return await this.request('pending', { account, count, threshold, source: true, include_active: true });

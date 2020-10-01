@@ -93,9 +93,7 @@ export class WebsocketService {
   keepalive() {
     this.keepaliveSet = true;
     if (this.socket.connected) {
-      this.socket.ws.send(JSON.stringify({ event: 'keepalive' }));
-      console.log('sent keepalive');
-      
+      this.socket.ws.send(JSON.stringify({ event: 'keepalive' }));      
     }
 
     setTimeout(() => {
