@@ -47,8 +47,6 @@ export class WebsocketService {
     this.socket.ws = ws;
 
     ws.onopen = event => {
-      console.log('onOpen: ', event);
-      
       this.socket.connected = true;
       this.queuedCommands.forEach(event => ws.send(JSON.stringify(event)));
 
@@ -62,7 +60,7 @@ export class WebsocketService {
       }
     };
     ws.onerror = event => {
-      // this.socket.connected = false;
+      this.socket.connected = false;
       console.log(`Socket error`, event);
     };
     ws.onclose = event => {
@@ -73,8 +71,6 @@ export class WebsocketService {
       setTimeout(() => this.attemptReconnect(), this.reconnectTimeout);
     };
     ws.onmessage = event => {
-      console.log('onMessage: ', event);
-      
       try {
         const newEvent = JSON.parse(event.data);
 
@@ -110,7 +106,6 @@ export class WebsocketService {
 
 
   subscribeAccounts(accountIDs: string[]) {
-    console.log('subscribing to account');
     
     const event = { event: 'subscribe', data: accountIDs };
     accountIDs.forEach(account => {
